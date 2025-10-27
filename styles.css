@@ -1,0 +1,143 @@
+body {
+  min-height: 100vh;
+  background-color: #06171e;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  color: whitesmoke;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.box_shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), 0 0 10px rgba(0, 255, 255, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header_container {
+  height: 60px;
+  background-color: #09212a;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 32px 16px;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.header_logo {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+}
+
+.footer {
+  height: 80px;
+  background-color: #09212a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 16px;
+}
+
+.main-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5%;
+
+  cursor: pointer;
+}
+
+.main-image:hover {
+  opacity: 0.2;
+}
+
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 150px;
+}
+
+#photo-gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+dialog {
+  background-color: #09212a;
+  color: whitesmoke;
+  height: 60%;
+  border: none;
+  border-radius: 5%;
+}
+
+dialog::backdrop {
+  opacity: 0.8;
+  background-color: black;
+  transition: all 1s ease-in;
+}
+
+#dialogTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close_button {
+  border: 0;
+  color: white;
+  background: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.close_button:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), 0 0 10px rgba(0, 255, 255, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dialog_image {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  padding-top: 60px;
+  padding-bottom: 90px;
+}
+
+.dialog_footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.arrow-button {
+  background-color: rgb(51, 51, 58);
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  border: none;
+  color: rgb(199, 36, 24);
+  font-size: 30px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow-button:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), 0 0 10px rgba(0, 255, 255, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
