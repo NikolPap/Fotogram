@@ -28,7 +28,7 @@ const PHOTOS_DESCRIPTION = [
   "Powerful waterfall cascading over rocky cliffs",
 ];
 
-let currentIndex = 0;
+let  = 0;
 const dialogRef = document.getElementById("myDialog");
 
 function logDownWBubblingProtection(event) {
@@ -41,12 +41,10 @@ dialogRef.addEventListener("click", (event) => {
   }
 });
 
-
 function initArray() {
   new_image = document.getElementById("gallery");
   for (let i = 0; i < PHOTOS.length; i++) {
-    new_image.innerHTML +=  `<button class="open_dialog_button box_shadow" tabindex="1" onclick="openDialog(${i}, event)" ><img  class="main-image"   src= "./img/images/${PHOTOS[i]}" alt = "${PHOTOS_DESCRIPTION[i]}"></button>`;
-   
+    new_image.innerHTML += `<button class="open_dialog_button box_shadow" tabindex="1" onclick="openDialog(${i}, event)" ><img  class="main-image"   src= "./img/images/${PHOTOS[i]}" alt = "${PHOTOS_DESCRIPTION[i]}"></button>`;
   }
 }
 
@@ -68,7 +66,7 @@ function closeDialog() {
   dialogRef.classList.remove("opened");
 }
 
-function previusPhoto(event) {
+function previousPhoto(event) {
   currentIndex = (currentIndex - 1 + PHOTOS.length) % PHOTOS.length;
   openDialog(currentIndex, event);
   event.stopPropagation();
@@ -78,4 +76,3 @@ function forwardPhoto(event) {
   currentIndex = (currentIndex + 1) % PHOTOS.length;
   openDialog(currentIndex, event);
 }
-
