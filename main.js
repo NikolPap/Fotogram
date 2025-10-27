@@ -1,5 +1,4 @@
 const PHOTOS = [
-  "antenna-2156818_1280.jpg",
   "autumn-9875155_1280.jpg",
   "blue-flower-6620619_1280.jpg",
   "duck-9826181_1280.jpg",
@@ -11,10 +10,10 @@ const PHOTOS = [
   "tavern-7411977_1280.jpg",
   "waterfall-4726196_1280.jpg",
   "waterfall-7478709_1280.jpg",
+  "antenna-2156818_1280.jpg"
 ];
 
 const PHOTOS_DESCRIPTION = [
-  "Radio antenna tower against a blue sky",
   "Colorful autumn forest with orange and yellow leaves",
   "Close-up of a delicate blue flower in bloom",
   "Wild duck swimming on a calm lake",
@@ -26,6 +25,7 @@ const PHOTOS_DESCRIPTION = [
   "Cozy rustic tavern interior with wooden tables",
   "Tall waterfall surrounded by lush green fores",
   "Powerful waterfall cascading over rocky cliffs",
+  "Radio antenna tower against a blue sky"
 ];
 
 let  = 0;
