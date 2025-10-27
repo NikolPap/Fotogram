@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Fotogram</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+
+    <body id= "body" onload="initArray()">
+
+        <header class="header_container">
+
+        <img class="header_logo" src="./img/Fotogram_Logo.svg" alt="a logo image">
+        
+       </header>
+
+       <main  class="main-content">
+
+        <section id="photo-gallery">
+
+            <h1>Your Personal photo album</h1>
+            <div id="gallery">
+                </div>
+                
+        </section>
+
+
+          <dialog class="box_shadow" id="myDialog" aria-labelledby="dialogTitle" aria-describedby="dialogDescription">
+                <header id="dialogTitle">
+                    <h2 id="dialog_headline">
+                        
+                    </h2>
+                    <button class="close_button"  onclick="closeDialog()">&times;</button>
+                </header>
+
+                <section>
+                    <div id="open_dialog_image"></div>
+                </section>
+
+                <footer class="dialog_footer">
+                    <button onclick="previusPhoto()" id="previus_photo" class="arrow-button">&#11013;</button>
+                    <span id="photo_number"></span>
+                    <button onclick="forwardPhoto()" id="next_photo" class="arrow-button">&#10145;</button>
+                </footer>
+            </dialog>
+     </main>
+
+       <footer class="footer"></footer>
+
+        
+        <script src="main.js"></script>
+    </body>
+
+</html>
+
