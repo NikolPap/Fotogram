@@ -35,14 +35,22 @@ function logDownWBubblingProtection(event) {
   event.stopPropagation();
 }
 
+dialogRef.addEventListener("click", (event) => {
+  if (event.target === dialogRef) {
+    closeDialog();
+  }
+});
+
+
 function initArray() {
   new_image = document.getElementById("gallery");
   for (let i = 0; i < PHOTOS.length; i++) {
-    new_image.innerHTML += `<img class="main-image box_shadow" onclick="openDialog(${i})" src= "./img/images/${PHOTOS[i]}" alt = "${PHOTOS_DESCRIPTION[i]}">`;
+    new_image.innerHTML +=  `<button class="open_dialog_button box_shadow" tabindex="1" onclick="openDialog(${i}, event)" ><img  class="main-image"   src= "./img/images/${PHOTOS[i]}" alt = "${PHOTOS_DESCRIPTION[i]}"></button>`;
+   
   }
 }
 
-function openDialog(i) {
+function openDialog(i, event) {
   currentIndex = i;
   const dialogImage = document.getElementById("open_dialog_image");
   const dialogHeadline = (document.getElementById("dialog_headline").innerHTML =
@@ -52,6 +60,7 @@ function openDialog(i) {
   dialogImage.innerHTML = `<img class="dialog_image" src= "./img/images/${PHOTOS[i]}" alt = "${PHOTOS_DESCRIPTION[i]}">`;
   dialogRef.showModal();
   dialogRef.classList.add("opened");
+  event.stopPropagation();
 }
 
 function closeDialog() {
@@ -59,12 +68,14 @@ function closeDialog() {
   dialogRef.classList.remove("opened");
 }
 
-function previusPhoto() {
+function previusPhoto(event) {
   currentIndex = (currentIndex - 1 + PHOTOS.length) % PHOTOS.length;
-  openDialog(currentIndex);
+  openDialog(currentIndex, event);
+  event.stopPropagation();
 }
 
-function forwardPhoto() {
+function forwardPhoto(event) {
   currentIndex = (currentIndex + 1) % PHOTOS.length;
-  openDialog(currentIndex);
+  openDialog(currentIndex, event);
 }
+
