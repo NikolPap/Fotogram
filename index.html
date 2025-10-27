@@ -8,7 +8,7 @@
   </head>
 
   <body id="body" onload="initArray()" onclick="closeDialog(event)">
-    <header class="header_container">
+    <header class="header_container" role="banner">
       <img
         class="header_logo"
         src="./img/Fotogram_Logo.svg"
@@ -16,10 +16,10 @@
       />
     </header>
 
-    <main class="main-content">
-      <section id="photo-gallery">
+    <main class="main-content" role="main">
+      <section id="photo-gallery" aria-labelledby="galleryTitle">
         <h1>Your Personal photo album</h1>
-        <div id="gallery"></div>
+        <div id="gallery" role="list"></div>
       </section>
 
       <dialog
@@ -27,11 +27,10 @@
         class="box_shadow"
         id="myDialog"
         aria-labelledby="dialogTitle"
-        aria-describedby="dialogDescription"
       >
         <header id="dialogTitle">
           <h2 id="dialog_headline"></h2>
-          <button class="close_button" onclick="closeDialog(event)">
+          <button class="close_button" aria-label="Close dialog" onclick="closeDialog(event)">
             &times;
           </button>
         </header>
