@@ -1,56 +1,67 @@
 <!DOCTYPE html>
 <html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Fotogram</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="icon" href="./img/favicon.svg" type="image/x-icon" />
+  </head>
 
-    <head>
-        <meta charset="utf-8">
-        <title>Fotogram</title>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-    </head>
+  <body id="body" onload="initArray()" onclick="closeDialog(event)">
+    <header class="header_container">
+      <img
+        class="header_logo"
+        src="./img/Fotogram_Logo.svg"
+        alt="a logo image"
+      />
+    </header>
 
-    <body id= "body" onload="initArray()">
+    <main class="main-content">
+      <section id="photo-gallery">
+        <h1>Your Personal photo album</h1>
+        <div id="gallery"></div>
+      </section>
 
-        <header class="header_container">
+      <dialog
+        onclick="logDownWBubblingProtection(event)"
+        class="box_shadow"
+        id="myDialog"
+        aria-labelledby="dialogTitle"
+        aria-describedby="dialogDescription"
+      >
+        <header id="dialogTitle">
+          <h2 id="dialog_headline"></h2>
+          <button class="close_button" onclick="closeDialog(event)">
+            &times;
+          </button>
+        </header>
 
-        <img class="header_logo" src="./img/Fotogram_Logo.svg" alt="a logo image">
-        
-       </header>
-
-       <main  class="main-content">
-
-        <section id="photo-gallery">
-
-            <h1>Your Personal photo album</h1>
-            <div id="gallery">
-                </div>
-                
+        <section>
+          <div id="open_dialog_image"></div>
         </section>
 
+        <footer class="dialog_footer">
+          <button tabindex="1"
+            onclick="previusPhoto(event)"
+            id="previus_photo"
+            class="arrow-button"
+          >
+            &#11013;
+          </button>
+          <span id="photo_number"></span>
+          <button tabindex="1"
+            onclick="forwardPhoto(event)"
+            id="next_photo"
+            class="arrow-button"
+          >
+            &#10145;
+          </button>
+        </footer>
+      </dialog>
+    </main>
 
-          <dialog class="box_shadow" id="myDialog" aria-labelledby="dialogTitle" aria-describedby="dialogDescription">
-                <header id="dialogTitle">
-                    <h2 id="dialog_headline">
-                        
-                    </h2>
-                    <button class="close_button"  onclick="closeDialog()">&times;</button>
-                </header>
+    <footer class="footer"></footer>
 
-                <section>
-                    <div id="open_dialog_image"></div>
-                </section>
-
-                <footer class="dialog_footer">
-                    <button onclick="previusPhoto()" id="previus_photo" class="arrow-button">&#11013;</button>
-                    <span id="photo_number"></span>
-                    <button onclick="forwardPhoto()" id="next_photo" class="arrow-button">&#10145;</button>
-                </footer>
-            </dialog>
-     </main>
-
-       <footer class="footer"></footer>
-
-        
-        <script src="main.js"></script>
-    </body>
-
+    <script src="main.js"></script>
+  </body>
 </html>
-
