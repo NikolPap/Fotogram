@@ -27,7 +27,7 @@ const PHOTOS_DESCRIPTION = [
   "Powerful waterfall cascading over rocky cliffs",
   "Radio antenna tower against a blue sky"
 ];
-
+let currentIndex = 0;
 const dialogRef = document.getElementById("myDialog");
 
 function logDownWBubblingProtection(event) {
@@ -80,7 +80,7 @@ function forwardPhoto(event) {
  document.addEventListener("keydown", function(event) {
     const prevBtn = document.getElementById("previous_photo");
     const nextBtn = document.getElementById("next_photo");
-
+ if (dialogRef.classList.contains("opened")) {
     if (event.key === "ArrowLeft") {
       prevBtn.focus();           
       previousPhoto(event);       
@@ -88,5 +88,5 @@ function forwardPhoto(event) {
     else if (event.key === "ArrowRight") {
       nextBtn.focus();          
       forwardPhoto(event);        
-    }
+    }}
   });
