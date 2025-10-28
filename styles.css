@@ -40,6 +40,9 @@ button:focus {
 /* -----MAIN-CONTENT------ */
 .main-content {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #photo-gallery {
@@ -73,7 +76,6 @@ button:focus {
 dialog {
   background-color: #09212a;
   color: whitesmoke;
-  height: 60%;
   border: none;
   border-radius: 5%;
 }
@@ -87,6 +89,12 @@ dialog::backdrop {
 #dialogTitle {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+#dialog_section {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -161,4 +169,54 @@ dialog::backdrop {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6),
               0 0 10px rgba(0, 255, 255, 0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+/* -----MEDIA-------- */
+
+@media (max-width:1290px) {
+
+  #gallery {
+    padding: 80px;
+  }
+
+}
+
+@media (max-width:880px) {
+
+  #gallery {
+    padding: 10px;
+  }
+
+  h1 {
+    padding-top: 0;
+  }
+
+  .header_logo {
+    width: 180px;
+  }
+
+}
+
+@media (max-width:490px) {
+
+ .main-image {
+  width: 95px;
+  height: 95px;
+  }
+
+  #gallery {
+    padding-top: 50px;
+  }
+
+  h1 {
+    font-size: 16px;
+  }
+
+  .dialog_image {
+    width: 280px;
+
+  }
+
 }
