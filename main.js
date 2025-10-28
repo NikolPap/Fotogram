@@ -41,6 +41,7 @@ dialogRef.addEventListener("click", (event) => {
   }
 });
 
+
 function initArray() {
   new_image = document.getElementById("gallery");
   for (let i = 0; i < PHOTOS.length; i++) {
@@ -76,3 +77,17 @@ function forwardPhoto(event) {
   currentIndex = (currentIndex + 1) % PHOTOS.length;
   openDialog(currentIndex, event);
 }
+
+ document.addEventListener("keydown", function(event) {
+    const prevBtn = document.getElementById("previous_photo");
+    const nextBtn = document.getElementById("next_photo");
+
+    if (event.key === "ArrowLeft") {
+      prevBtn.focus();           
+      previousPhoto(event);       
+    }
+    else if (event.key === "ArrowRight") {
+      nextBtn.focus();          
+      forwardPhoto(event);        
+    }
+  });
