@@ -28,7 +28,6 @@ const PHOTOS_DESCRIPTION = [
   "Radio antenna tower against a blue sky"
 ];
 
-let  = 0;
 const dialogRef = document.getElementById("myDialog");
 
 function logDownWBubblingProtection(event) {
