@@ -77,6 +77,7 @@ function forwardPhoto(event) {
   openDialog(currentIndex, event);
 }
 
+
  document.addEventListener("keydown", function(event) {
     const prevBtn = document.getElementById("previous_photo");
     const nextBtn = document.getElementById("next_photo");
