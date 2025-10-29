@@ -12,7 +12,6 @@ body {
 .max_width {
   max-width: 1460px;
   margin: 0 auto;
-
 }
 
 /* -----FOCUS-STATUS------*/
@@ -33,16 +32,14 @@ button:focus {
 .logo {
   max-width: 280px;
   width: 100%;
-
 }
 
-.header_inner{
-  max-width:1440px;
+.header_inner {
+  max-width: 1440px;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start
-  
+  justify-content: flex-start;
 }
 
 /* -----MAIN-CONTENT------ */
