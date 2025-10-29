@@ -10,7 +10,7 @@ const PHOTOS = [
   "tavern-7411977_1280.jpg",
   "waterfall-4726196_1280.jpg",
   "waterfall-7478709_1280.jpg",
-  "antenna-2156818_1280.jpg"
+  "antenna-2156818_1280.jpg",
 ];
 
 const PHOTOS_DESCRIPTION = [
@@ -25,7 +25,7 @@ const PHOTOS_DESCRIPTION = [
   "Cozy rustic tavern interior with wooden tables",
   "Tall waterfall surrounded by lush green fores",
   "Powerful waterfall cascading over rocky cliffs",
-  "Radio antenna tower against a blue sky"
+  "Radio antenna tower against a blue sky",
 ];
 let currentIndex = 0;
 const dialogRef = document.getElementById("myDialog");
@@ -39,7 +39,6 @@ dialogRef.addEventListener("click", (event) => {
     closeDialog();
   }
 });
-
 
 function initArray() {
   new_image = document.getElementById("gallery");
@@ -77,17 +76,16 @@ function forwardPhoto(event) {
   openDialog(currentIndex, event);
 }
 
-
- document.addEventListener("keydown", function(event) {
-    const prevBtn = document.getElementById("previous_photo");
-    const nextBtn = document.getElementById("next_photo");
- if (dialogRef.classList.contains("opened")) {
+document.addEventListener("keydown", function (event) {
+  const prevBtn = document.getElementById("previous_photo");
+  const nextBtn = document.getElementById("next_photo");
+  if (dialogRef.classList.contains("opened")) {
     if (event.key === "ArrowLeft") {
-      prevBtn.focus();           
-      previousPhoto(event);       
+      prevBtn.focus();
+      previousPhoto(event);
+    } else if (event.key === "ArrowRight") {
+      nextBtn.focus();
+      forwardPhoto(event);
     }
-    else if (event.key === "ArrowRight") {
-      nextBtn.focus();          
-      forwardPhoto(event);        
-    }}
-  });
+  }
+});

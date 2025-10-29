@@ -9,32 +9,35 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-/* -----HEADLINES----- */
-h1 {
-  text-align: center;
-  padding-top: 30px;
+.max_width {
+  max-width: 1460px;
+  margin: 0 auto;
 }
 
 /* -----FOCUS-STATUS------*/
 button:focus {
-  outline: 3px solid #FF5733;
+  outline: 3px solid #ff5733;
   outline-offset: 2px;
 }
 
 /* -----HEADER------ */
 .header_container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   height: 60px;
   padding: 32px 16px;
   background-color: #09212a;
 }
 
-.header_logo {
+.logo {
   max-width: 280px;
   width: 100%;
   height: auto;
+}
+
+.header_logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 /* -----MAIN-CONTENT------ */
@@ -43,12 +46,14 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 #photo-gallery {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
 
 /* -----GALLERY------*/
@@ -107,8 +112,7 @@ dialog::backdrop {
 }
 
 .close_button:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6),
-              0 0 10px rgba(0, 255, 255, 0.25);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), 0 0 10px rgba(0, 255, 255, 0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -142,8 +146,7 @@ dialog::backdrop {
 }
 
 .arrow-button:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6),
-              0 0 10px rgba(0, 255, 255, 0.25);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), 0 0 10px rgba(0, 255, 255, 0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -162,29 +165,24 @@ dialog::backdrop {
   height: 80px;
   padding: 32px 16px;
   background-color: #09212a;
+  width: 100%;
 }
 
 /* -----UTILITIES------ */
 .box_shadow {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6),
-              0 0 10px rgba(0, 255, 255, 0.25);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), 0 0 10px rgba(0, 255, 255, 0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-
 /* -----MEDIA-------- */
 
-@media (max-width:1290px) {
-
+@media (max-width: 1290px) {
   #gallery {
     padding: 80px;
   }
-
 }
 
-@media (max-width:880px) {
-
+@media (max-width: 880px) {
   #gallery {
     padding: 10px;
   }
@@ -193,17 +191,12 @@ dialog::backdrop {
     padding-top: 0;
   }
 
-  .header_logo {
-    width: 180px;
-  }
-
 }
 
-@media (max-width:490px) {
-
- .main-image {
-  width: 95px;
-  height: 95px;
+@media (max-width: 490px) {
+  .main-image {
+    width: 95px;
+    height: 95px;
   }
 
   #gallery {
@@ -216,7 +209,5 @@ dialog::backdrop {
 
   .dialog_image {
     width: 280px;
-
   }
-
 }
