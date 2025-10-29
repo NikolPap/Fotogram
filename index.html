@@ -9,13 +9,13 @@
   </head>
 
   <body id="body" onload="initArray()" onclick="closeDialog(event)">
-    <header class="header_container" role="banner">
-      <div class="header_logo max_width">
-        <img class="logo" src="./img/Fotogram_Logo.svg" alt="Fotogram Logo" />
-      </div>
-    </header>
+   <header class="header_container" role="banner">
+    <div class="header_inner">
+      <img class="logo" src="./img/Fotogram_Logo.svg" alt="Fotogram Logo" />
+    </div>
+   </header>
 
-    <main class="main-content max_width" role="main">
+    <main class="main-content" role="main">
       <section id="photo-gallery" aria-labelledby="galleryTitle">
         <h1>Your Personal photo album</h1>
         <div id="gallery"></div>
@@ -64,7 +64,7 @@
       </dialog>
     </main>
 
-    <footer class="footer max_width"></footer>
+    <footer class="footer"></footer>
 
     <script src="main.js"></script>
   </body>

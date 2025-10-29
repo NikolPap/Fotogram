@@ -12,6 +12,7 @@ body {
 .max_width {
   max-width: 1460px;
   margin: 0 auto;
+
 }
 
 /* -----FOCUS-STATUS------*/
@@ -25,19 +26,23 @@ button:focus {
   height: 60px;
   padding: 32px 16px;
   background-color: #09212a;
+  display: flex;
+  justify-content: center;
 }
 
 .logo {
   max-width: 280px;
   width: 100%;
-  height: auto;
+
 }
 
-.header_logo {
+.header_inner{
+  max-width:1440px;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-start
+  
 }
 
 /* -----MAIN-CONTENT------ */
@@ -47,6 +52,8 @@ button:focus {
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 #photo-gallery {
@@ -165,7 +172,6 @@ dialog::backdrop {
   height: 80px;
   padding: 32px 16px;
   background-color: #09212a;
-  width: 100%;
 }
 
 /* -----UTILITIES------ */
@@ -191,6 +197,9 @@ dialog::backdrop {
     padding-top: 0;
   }
 
+  .logo {
+    width: 180px;
+  }
 }
 
 @media (max-width: 490px) {
